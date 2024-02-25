@@ -8,9 +8,14 @@ Thhis project enables a separate web application to do the work it needs to do b
 
 ## Important Information
 
-The following endpoint should be used for the fetch request and running the micros service locally: http://localhost:3000/ 
+The following endpoint should be used for the fetch request and running the micrservice locally: http://localhost:3000/ 
 
 The park codes can be found at this location: http://localhost:4000
 
 The user should first run the microservice file and then run the react application. I advise changing app.JS into a separate page within your application to maintain button functionality. This is not mandatory though :)
 
+## Which file is the microservice?
+
+idCodesMicroservice.js
+
+you should make a point to download the entire repo, but this is the most important file as the rest of the application acts to present the button functionality as app.JS. Beyond this it's important to make sure that you have node and all other necessary dependencies installed. The application is designed as minimally as possible to reduce dependencies.
