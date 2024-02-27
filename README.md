@@ -33,6 +33,7 @@ The portion below, which is the getRandomID, and does the heavy lifting with the
 
 <img width="1093" alt="image" src="https://github.com/BigDataBaba/cs361-repo/assets/40153506/ed32fe42-fc75-4932-b91a-2e59ceab0ff6">
 
+Above shows the code which will handle the JSON. The code listed above this image, and the previous response provides an approach for handling the JSON on the front end, and then quickly integrating it within the application into a button page.
 
 
 ## UML sequence diagram showing how requesting and receiving data works. Make it detailed enough that your partner (and your grader) will understand
