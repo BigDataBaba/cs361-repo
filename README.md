@@ -25,7 +25,15 @@ you should make a point to download the entire repo, but this is the most import
 
 <img width="888" alt="image" src="https://github.com/BigDataBaba/cs361-repo/assets/40153506/198d98af-07d8-41a2-8146-0d2a816b6473">
 
+Above we see an example request from my the microservice. I made a point to throw in an error as the entire microservice will fall apart if the ID codes are not fetched. It would also be very difficult to know whether or not those ID codes were fetched. We use generic JavaScript try syntax here.
+
+The portion below, which is the getRandomID, and does the heavy lifting with the return from the microservice.
+
 ## Clear instructions for how to programmatically RECEIVE data from the microservice you implemented.
+
+<img width="1093" alt="image" src="https://github.com/BigDataBaba/cs361-repo/assets/40153506/ed32fe42-fc75-4932-b91a-2e59ceab0ff6">
+
+
 
 ## UML sequence diagram showing how requesting and receiving data works. Make it detailed enough that your partner (and your grader) will understand
 
