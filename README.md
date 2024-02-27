@@ -38,4 +38,4 @@ Above shows the code which will handle the JSON. The code listed above this imag
 
 ## UML sequence diagram showing how requesting and receiving data works. Make it detailed enough that your partner (and your grader) will understand
 
-
+<img width="763" alt="image" src="https://github.com/BigDataBaba/cs361-repo/assets/40153506/da515071-2b42-45c5-957f-21bdc48afff4">
