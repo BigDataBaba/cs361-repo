@@ -2,22 +2,21 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [idCodes, setIdCodes] = useState([]);
   const [randomID, setRandomID] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const fetchIDCodes = async () => {
+  const fetchRandomID = async () => {  //Christian I changed this name
     setIsLoading(true);
     setError(null);
 
     try {
       const response = await fetch('http://localhost:4000');
       if (!response.ok) {
-        throw new Error('Failed to fetch ID codes');
+        throw new Error('Failed to fetch ID code');
       }
-      const data = await response.json();
-      setIdCodes(data);
+      const data = await response.text();  //Change to .text insted of json as it returns one id code
+      setRandomID(data); //Setter w/ new data 
     } catch (error) {
       setError(error.message);
     } finally {
@@ -25,25 +24,17 @@ function App() {
     }
   };
 
-  const getRandomID = () => {
-    const randomIndex = Math.floor(Math.random() * idCodes.length);
-    const randomID = idCodes[randomIndex];
-    setRandomID(randomID);
-  };
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>Microservice Demo</h1>
-        {isLoading && <p>Loading ID codes...</p>}
+        {isLoading && <p>Loading ID code...</p>}
         {error && <p>Error: {error}</p>}
-        {!isLoading && !error && idCodes.length === 0 && (
-          <button onClick={fetchIDCodes}>Fetch ID Codes</button>
-        )}
-        {!isLoading && !error && idCodes.length > 0 && (
+        {!isLoading && !error && (
           <>
             <p>Random ID: {randomID}</p>
-            <button onClick={getRandomID}>Get Random ID</button>
+            <button onClick={fetchRandomID}>Get Random ID</button>
           </>
         )}
       </header>

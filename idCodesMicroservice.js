@@ -11,6 +11,12 @@ const idCodes = [
   "yell", "yose", "zion"
 ];
 
+// Moving random code access to microservice
+function getRandomID() {
+    const randomID = Math.floor(Math.random() * idCodes.length);
+    return idCodes[randomID]
+}
+
 const server = http.createServer((req, res) => {
   // Allow requests from any origin (CORS)
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -18,7 +24,8 @@ const server = http.createServer((req, res) => {
   if (req.method === 'GET' && req.url === '/') {
     // Serve ID codes as JSON
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(idCodes));
+    const randomIDValue = getRandomID() //Added this to call PRIOR to sending back 
+    res.end(JSON.stringify(randomIDValue));
   } else {
     res.statusCode = 404;
     res.end('Not Found');
